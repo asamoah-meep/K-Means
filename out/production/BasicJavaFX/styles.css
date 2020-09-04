@@ -1,0 +1,6 @@
+#Grid{
+    -fx-alignment: center;
+    -fx-vgap: 3;
+    -fx-hgap: 1;
+    -fx-grid-lines-visible: true;
+}
