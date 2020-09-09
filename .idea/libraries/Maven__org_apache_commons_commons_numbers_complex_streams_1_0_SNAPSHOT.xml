@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.commons:commons-numbers-complex-streams:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-numbers-complex-streams/1.0-SNAPSHOT/commons-numbers-complex-streams-1.0-20200406.133825-171.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-numbers-complex-streams/1.0-SNAPSHOT/commons-numbers-complex-streams-1.0-20200406.133825-171-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-numbers-complex-streams/1.0-SNAPSHOT/commons-numbers-complex-streams-1.0-20200406.133825-171-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

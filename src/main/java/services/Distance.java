@@ -10,7 +10,7 @@ public class Distance {
     private static double dotProduct(WordVector a){
         double sum =0;
         for(Word w:a.getWordList()){
-            sum+= w.getTF_IDF() * w.getTF_IDF();
+            sum+= (w.getTF_IDF() * w.getTF_IDF());
         }
         return sum;
     }
@@ -41,7 +41,7 @@ public class Distance {
         return diffVect;
     }
 
-    static double euclid(WordVector a, WordVector b){
+    public static double euclid(WordVector a, WordVector b){
         WordVector diffVect = difference(a,b);
         return Math.sqrt(dotProduct(diffVect));
     }

@@ -27,41 +27,18 @@ public class FileManager {
         Properties props = new Properties();
         props.setProperty("annotators", "tokenize,ssplit,pos,lemma,ner"); //set annotations
         pipeline = new StanfordCoreNLP(props);
-        wordMatrix = new ArrayList<>();
 
         final int DOCS = 24;
+        wordMatrix = new ArrayList<>();
+        for(int i =0; i < DOCS; i++)
+            wordMatrix.add(new ArrayList<>());
         allDocs = new Document[DOCS];
+
         ThreadReader[] threadReaders = new ThreadReader[3];
         for(int i =0; i < threadReaders.length; i++) {
             threadReaders[i] = new ThreadReader(i * 8, stopwords, wordMatrix);
             threadReaders[i].start();
         }
-
-//        for(int i=1; i <= DOCS; i++){
-
-//
-//            File f = new File("src/main/resources/articles/article" + i +".txt");
-//
-//            System.out.println("Reading article " + i);
-//
-//            BufferedReader reader = new BufferedReader(new FileReader(f));
-//
-//            String line;
-//            StringBuilder doc = new StringBuilder();
-//            while ((line = reader.readLine()) != null) //read each document
-//                doc.append(line.toLowerCase().replaceAll("\\W", " ")).append(" "); //remove special characters
-//
-//            String[] rawWords = doc.toString().split("\\s+");
-//            doc = new StringBuilder();
-//            for (String rawWord : rawWords)
-//                if (!stopwords.contains(rawWord))
-//                    doc.append(rawWord).append(" "); //remove stop words characters
-//
-//            ArrayList<Word> wordList = oneGram(doc.toString(),i);
-//            wordList.addAll(twoGram(doc.toString(),i));
-//            wordMatrix.add(wordList);
-//
-//        }
 
         try {
             for (ThreadReader t : threadReaders)
@@ -74,7 +51,6 @@ public class FileManager {
 
 
     private static Set<String> loadStopwords() throws IOException {
-        System.out.println(new File("").getAbsolutePath());
         BufferedReader reader = new BufferedReader(new FileReader(new File("src/main/resources/stopwords.txt")));
         HashSet<String> stopwords = new HashSet<>();
         String line;

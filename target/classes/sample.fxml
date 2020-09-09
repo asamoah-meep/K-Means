@@ -22,16 +22,16 @@
     <Label text="Cluster Creation:"
            GridPane.columnIndex="0" GridPane.rowIndex="2"/>
 
-        <RadioButton text="Optimized (K-Means++)" toggleGroup="$Cluster_Creation"  selected="true" userData="O"
+        <RadioButton text="Optimized (K-Means++)" toggleGroup="$Cluster_Creation"  selected="true" userData="optimized"
                      GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-        <RadioButton text="Random" toggleGroup="$Cluster_Creation" userData="R"
+        <RadioButton text="Random" toggleGroup="$Cluster_Creation" userData="random"
                      GridPane.columnIndex="1" GridPane.rowIndex="4"/>
 
     <Label text="Distance Measure:"
            GridPane.columnIndex="0" GridPane.rowIndex="5"/>
         <RadioButton text="Cosine Similarity" toggleGroup="$Distance_Measure" selected="true" userData="cos"
                      GridPane.columnIndex="1" GridPane.rowIndex="6"/>
-        <RadioButton text="Euclidian Distance" toggleGroup="$Distance_Measure" userData="Euclid"
+        <RadioButton text="Euclidian Distance" toggleGroup="$Distance_Measure" userData="euclid"
                      GridPane.columnIndex="1" GridPane.rowIndex="7"/>
 
     <Label text="PCA Analysis:"

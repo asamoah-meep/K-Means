@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class WordVector {
 
-    private final int index;
+    private int index;
     private final ArrayList<Word> wordList;
 
     public WordVector(ArrayList<Word> wordList, int index){
@@ -39,5 +39,13 @@ public class WordVector {
 
     public ArrayList<Word> getWordList(){
         return wordList;
+    }
+
+    public void setIndex(int index){
+        this.index = index;
+    }
+
+    public int getIndex(){
+        return index;
     }
 }
