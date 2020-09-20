@@ -1,9 +1,11 @@
-package sample;
+package controllers;
 
+import main.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.stage.Stage;
 import objects.Parameters;
 import services.FileManager;
 import services.WordAnalysis;
@@ -11,7 +13,7 @@ import services.WordAnalysis;
 import java.io.IOException;
 
 
-public class Controller {
+public class InputController {
 
     @FXML private TextField Cluster_Count;
     @FXML private ToggleGroup Cluster_Creation;
@@ -39,6 +41,7 @@ public class Controller {
         Parameters p = new Parameters(ClusterCreation,Distance,PCA,ClusterCount);
 
         try{
+            Main.changeScene();
             FileManager.init();
             WordAnalysis.init(FileManager.getWordMatrix(), FileManager.getAllDocs(), p);
         }catch (IOException e){
